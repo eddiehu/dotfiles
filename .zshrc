@@ -5,13 +5,14 @@ antigen use oh-my-zsh
 
 # bundles from default library
 antigen bundle git
+antigen bundle sublime
 
 # Syntax highlighting and autocomplete
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Theme
-antigen theme soliah
+antigen theme Soliah
 
 # Apply
 antigen apply
