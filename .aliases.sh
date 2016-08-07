@@ -20,11 +20,11 @@ alias lps="lpass show -c --password"
 alias lpsync="lpass sync -b"
 
 # apt-get
-alias aar="add-apt-repository"
-alias agar="apt-get autoremove"
-alias api="apt-get install"
-alias agr="apt-get remove"
-alias agu="apt-get update"
+alias aar="sudo add-apt-repository"
+alias agar="sudo apt-get autoremove"
+alias api="sudo apt-get install"
+alias agr="sudo apt-get remove"
+alias agu="sudo apt-get update"
 
 # Files
 alias l="ls -o -hX --group-directories-first"
