@@ -12,7 +12,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Theme
-antigen theme Soliah
+# antigen theme Soliah
+antigen theme agnoster
 
 # Apply
 antigen apply
