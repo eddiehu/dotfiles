@@ -1,4 +1,4 @@
-source ~/dotfiles/antigen/antigen.zsh
+source ~/Projects/dotfiles/antigen/antigen.zsh
 
 # Load oh-my-zsh library
 antigen use oh-my-zsh
@@ -16,5 +16,8 @@ antigen theme Soliah
 
 # Apply
 antigen apply
+
+# Custom aliases
+source ~/.aliases.sh
 
 export EDITOR=subl
