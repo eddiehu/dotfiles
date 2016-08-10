@@ -22,7 +22,7 @@ alias lpsync="lpass sync -b"
 # apt-get
 alias aar="sudo add-apt-repository"
 alias agar="sudo apt-get autoremove"
-alias api="sudo apt-get install"
+alias agi="sudo apt-get install"
 alias agr="sudo apt-get remove"
 alias agu="sudo apt-get update"
 
