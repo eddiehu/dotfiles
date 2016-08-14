@@ -47,7 +47,12 @@ URxvt.scrollTtyKeypress:    true
 *color15: #C5C8C6
 
 ! EXTENSIONS
-URxvt.perl-ext-common:  default,fullscreen,matcher,resize-font
+! extension files are located at /usr/lib/urxvt/perl
+URxvt.perl-ext-common:  default,fullscreen,matcher,resize-font,keyboard-select
+
+! Keyboard select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
 
 ! Open URLs with Chrome
 URxvt.urlLauncher:      google-chrome

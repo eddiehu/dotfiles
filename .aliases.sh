@@ -35,3 +35,6 @@ alias s="subl"
 alias zshrc="source ~/.zshrc"
 alias xres="xrdb ~/.Xresources"
 alias update.="gaa && gcmsg 'Update dotfiles' && gp"
+
+# Tmux
+alias tmux="tmux-next"

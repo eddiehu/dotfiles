@@ -35,4 +35,5 @@ fi
 
 if ask "Install symlink for .Xresources?" Y; then
   ln -sf ${dir}/.Xresources ${HOME}/.Xresources
+  xrdb ${HOME}/.Xresources
 fi
