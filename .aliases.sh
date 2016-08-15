@@ -15,7 +15,7 @@ alias gpl="git pull"
 
 # Lastpass
 alias lpl="lpass ls"
-alias lplg="lpass ls | grep"
+alias lplg="lpass ls | grep -i"
 alias lps="lpass show -c --password"
 alias lpsync="lpass sync -b"
 
@@ -35,6 +35,3 @@ alias s="subl"
 alias zshrc="source ~/.zshrc"
 alias xres="xrdb ~/.Xresources"
 alias update.="gaa && gcmsg 'Update dotfiles' && gp"
-
-# Tmux
-alias tmux="tmux-next"

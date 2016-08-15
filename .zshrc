@@ -7,13 +7,12 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle sublime
 
-# Syntax highlighting and autocomplete
+# Syntax highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
 
 # Theme
-antigen theme Soliah
-# antigen theme agnoster
+# antigen theme Soliah
+antigen theme agnoster
 
 # Apply
 antigen apply

@@ -48,11 +48,7 @@ URxvt.scrollTtyKeypress:    true
 
 ! EXTENSIONS
 ! extension files are located at /usr/lib/urxvt/perl
-URxvt.perl-ext-common:  default,fullscreen,matcher,resize-font,keyboard-select
-
-! Keyboard select
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.perl-ext-common:  default,fullscreen,matcher,resize-font
 
 ! Open URLs with Chrome
 URxvt.urlLauncher:      google-chrome
