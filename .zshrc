@@ -1,6 +1,6 @@
-source ~/Projects/dotfiles/antigen/antigen.zsh
+source ~/antigen.zsh
 
-# Load oh-my-zsh library
+# load oh-my-zsh library
 antigen use oh-my-zsh
 
 # bundles from default library
@@ -11,13 +11,8 @@ antigen bundle sublime
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Theme
-# antigen theme Soliah
-antigen theme agnoster
+antigen theme bhilburn/powerlevel9k powerlevel9k
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
 # Apply
 antigen apply
-
-# Custom aliases
-source ~/.aliases.sh
-
-export EDITOR=subl
