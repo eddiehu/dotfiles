@@ -1,3 +1,12 @@
+# Colors                border  backgr. text    indicator child_border
+client.focused          #d65d0e #285577 #fbf1c7 #af3a03   #fe8019
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #504945 #222222 #fbf1c7 #1d2021   #3c3836
+client.urgent           #fb4934 #900000 #fbf1c7 #9d0006   #cc241d
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #282828
+
 # set mod to Windows key
 set $mod Mod4
 
@@ -89,9 +98,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Window and workspace config
 assign [class="Google Play Music Desktop Player"] $ws1
-for_window [class="Google Play Music Desktop Player" Name="Settings"] floating enable
 assign [class="^URxvt"] $ws2
 assign [class="^Google-chrome"] $ws3
+assign [class="^Dolphin-emu"] $ws6
 
 for_window [class="^.*"] border pixel 5
 gaps inner 25
@@ -112,14 +121,28 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Suspend, Restart, Power Off
-bindsym $mod+Shift+s exec systemctl suspend
-bindsym $mod+Shift+q exec systemctl poweroff
-bindsym $mod+Shift+p exec systemctl restart
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+p) power off
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym s exec --no-startup-id i3lock && systemctl suspend, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+p exec --no-startup-id systemctl poweroff, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+p mode "$mode_system"
 
 # Startup apps and scripts
 exec --no-startup-id feh --bg-fill Dropbox/Photos/Wallpapers/4K\ 006.jpg
 exec --no-startup-id compton -b
 exec --no-startup-id redshift -m randr -l geoclue2 -t 6500:3500
+exec --no-startup-id nm-applet
+exec google-chrome
+exec rxvt-unicode
+exec google-play-music-desktop-player
+exec dropbox start
 
 # resize mode
 bindsym $mod+r mode "resize"
@@ -150,7 +173,7 @@ mode "resize" {
 # finds out, if available)
 bar {
         status_command i3status --config ~/.config/i3/i3status.conf
-	font xft: Roboto Mono for Powerline, FontAwesome, Bold 12
+	font xft: Roboto Mono for Powerline, FontAwesome, Bold 10
 	strip_workspace_numbers yes
 	separator_symbol "  "
 
