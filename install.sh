@@ -33,11 +33,6 @@ if ask "Install symlink for .zshrc?" Y; then
   ln -sf ${dir}/.aliases.sh ${HOME}/.aliases.sh
 fi
 
-if ask "Install symlink for .Xresources?" Y; then
-  ln -sf ${dir}/.Xresources ${HOME}/.Xresources
-  xrdb ${HOME}/.Xresources
-fi
-
 if ask "Install symlink for .tmux.conf?" Y; then
   ln -sf ${dir}/.tmux.conf ${HOME}/.tmux.conf
 fi
