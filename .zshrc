@@ -38,5 +38,9 @@ if [ -f /etc/bash_completion.d/g4d ]; then
   zstyle ':completion:*' cache-path ~/.zsh/cache;
 fi
 
+if [ -d ~/bin ]; then
+  export PATH=$PATH:~/bin;
+fi
+
 alias l="ls -lhL --color --group-directories-first"
 alias la="ls -lhLA --color --group-directories-first"
