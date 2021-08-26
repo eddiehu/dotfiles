@@ -37,6 +37,9 @@ if [ -f /etc/bash_completion.d/g4d ]; then
   zstyle ':completion:*' use-cache on;
   zstyle ':completion:*' cache-path ~/.zsh/cache;
 fi
+if [ -f /etc/bash_completion.d/hgd ]; then
+  source /etc/bash_completion.d/hgd;
+fi
 
 if [ -d ~/bin ]; then
   export PATH=$PATH:~/bin;
